@@ -1,6 +1,6 @@
 import React from 'react';
 import { useFonts } from 'expo-font';
-import { Roboto_700Bold } from '@expo-google-fonts/roboto';
+import { Roboto_700Bold, Roboto_400Regular } from '@expo-google-fonts/roboto';
 import 'react-native-gesture-handler';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
@@ -15,7 +15,8 @@ export default function App() {
     'SFProDisplay-Bold': require('./assets/fonts/SFProDisplay-Bold.ttf'),
     'SFProText-Regular': require('./assets/fonts/SFProText-Regular.ttf'),
     'SFProText-Semibold': require('./assets/fonts/SFProText-Semibold.ttf'),
-    Roboto_700Bold
+    Roboto_700Bold,
+    Roboto_400Regular,
   });
 
   if (!fontsLoaded) {

@@ -3,6 +3,7 @@ import { StyleSheet } from 'react-native';
 const styles = StyleSheet.create({
 	container: {
 		margin: 20,
+		flex: 1,
 	},
 
 	backButton: {
@@ -46,6 +47,11 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderRadius: 27,
     borderColor: "#D9D0E3",
+  },
+
+  CategoriesContainer: {
+    flex: 1,
+    marginTop: 20,
   },
 });
 
