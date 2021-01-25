@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import { Text, View, TouchableOpacity, Image, TextInput, SafeAreaView, FlatList } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+
 import Card from '../components/Card';
 
 import styles from './styles/CategoriesScreen';
@@ -52,6 +55,8 @@ const categories = [
   },
 ];
 
+const Tab = createBottomTabNavigator();
+
 export default function CategoriesScreen({ navigation }: { navigation: any }) {
 	const [searchText, setSearchText] = useState('');
 
@@ -95,7 +100,6 @@ export default function CategoriesScreen({ navigation }: { navigation: any }) {
         contentContainerStyle={{ paddingBottom: 20 }}
       />
       </View>
-
     </View>
   );
 }

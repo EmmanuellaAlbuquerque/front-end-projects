@@ -2,8 +2,10 @@ import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
 	container: {
-		margin: 20,
-		flex: 1,
+    flex: 1,
+    marginTop: 20,
+    marginLeft: 20,
+    marginRight: 20,
 	},
 
 	backButton: {

@@ -7,6 +7,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { Text } from 'react-native';
 import SplashScreen from './src/pages/SplashScreen';
 import CategoriesScreen from './src/pages/CategoriesScreen';
+import TabMenuScreen from './src/pages/TabMenuScreen';
 
 const Stack = createStackNavigator();
 
@@ -34,7 +35,10 @@ export default function App() {
             name="SplashScreen"
             component={SplashScreen}
           />
-          <Stack.Screen name="CategoriesScreen" component={CategoriesScreen} />
+          <Stack.Screen
+            name="TabMenuScreen"
+            component={TabMenuScreen}
+          />
         </Stack.Navigator>
       </NavigationContainer>
     );

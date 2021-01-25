@@ -10,7 +10,7 @@ import styles from './styles/SplashScreen';
 /* lose type safety */
 export default function SplashScreen({ navigation }: { navigation: any }) {
   function handleOrderNow() {
-    navigation.navigate('CategoriesScreen');
+    navigation.navigate('TabMenuScreen');
   }
 
   function handleDismiss() {
