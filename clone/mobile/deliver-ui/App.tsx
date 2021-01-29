@@ -8,6 +8,7 @@ import { Text } from 'react-native';
 import SplashScreen from './src/pages/SplashScreen';
 import CategoriesScreen from './src/pages/CategoriesScreen';
 import TabMenuScreen from './src/pages/TabMenuScreen';
+import CategoryScreen from './src/pages/CategoryScreen';
 
 const Stack = createStackNavigator();
 
@@ -38,6 +39,10 @@ export default function App() {
           <Stack.Screen
             name="TabMenuScreen"
             component={TabMenuScreen}
+          />
+          <Stack.Screen
+            name="CategoryScreen"
+            component={CategoryScreen}
           />
         </Stack.Navigator>
       </NavigationContainer>

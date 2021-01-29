@@ -7,8 +7,7 @@ import background from '../../assets/images/background.png';
 
 import styles from './styles/SplashScreen';
 
-/* lose type safety */
-export default function SplashScreen({ navigation }: { navigation: any }) {
+export default function SplashScreen({ navigation }) {
   function handleOrderNow() {
     navigation.navigate('TabMenuScreen');
   }

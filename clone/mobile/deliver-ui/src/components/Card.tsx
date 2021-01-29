@@ -3,10 +3,17 @@ import { Text, TouchableOpacity, Image } from 'react-native';
 
 import styles from './styles/Card';
 
-export default function Card({ title, photo_url, amount }) {
+export default function Card({ title, photo_url, amount, navigation}) {
+	function handleCategoryPress() {
+		navigation.navigate('CategoryScreen', {
+            title,
+          });
+	}
 
   return (
-	  <TouchableOpacity style={styles.card}>
+	  <TouchableOpacity 
+	  	onPress={handleCategoryPress}
+	  	style={styles.card}>
 	    <Image
 	      style={styles.cardImage}
 	      source={photo_url}
