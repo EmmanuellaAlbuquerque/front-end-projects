@@ -8,16 +8,35 @@ const styles = StyleSheet.create({
     marginRight: 20,
 	},
 
-	backButton: {
-		marginTop: 50,
-		height: 12,
-		width: 6,
-	},
+  header: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
+
+  backButton: {
+    marginTop: 50,
+    height: 12,
+    width: 6,
+  },
+
+  button: {
+    flex: 1,
+    paddingBottom: 15,
+  },
+
+  cover: {
+    width: 210,
+    height: 209,
+    position: 'absolute',
+    right: 1,
+
+    justifyContent: "flex-end",
+  },
 
   title: {
     fontFamily: 'SFProDisplay-Bold',
     fontSize: 34,
-    marginTop: 20,
+    marginTop: 10,
   },
 
   searchInput: {

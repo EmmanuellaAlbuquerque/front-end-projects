@@ -10,7 +10,7 @@ export default function HeaderGridContainer({ route, navigation, children }) {
 	const [searchText, setSearchText] = useState('');
 	var title;
 	if (route.params !== undefined) {
-		title = route.params.title;
+		title = route.params.item.title;
 	}
 	else {
 		title = route.name;
@@ -26,29 +26,38 @@ export default function HeaderGridContainer({ route, navigation, children }) {
   }
 
 	return (
-    <View style={styles.container}>
-		  <TouchableOpacity onPress={handleGoBack}>
-			<Image
-				style={styles.backButton}
-	      		source={back}
-		    />
-		  </TouchableOpacity>
-      <Text style={styles.title}>
-        {title}
-      </Text>
-      <View style={[styles.searchShape, styles.searchContainer]}>
-	    	<Image
-	    	  style={styles.searchIcon}
-	      	source={search}
-	    	/>
-	      <TextInput
-	        style={[styles.searchShape, styles.searchInput]}
-	        placeholder="Search"
-	        onChangeText={searchText => setSearchText(searchText)}
-	        defaultValue={searchText}
-	      />
-      </View>
-      {children}
-    </View>
+	<>
+		{ route.params && <Image
+	    style={styles.cover}
+	    source={route.params.item.cover}
+	  	/>
+	  }
+		<View style={styles.container}>
+			<View style={styles.header}>
+			  <TouchableOpacity style={styles.button} onPress={handleGoBack}>
+				<Image
+					style={styles.backButton}
+					source={back}
+				/>
+			  </TouchableOpacity>
+		  </View>
+		  <Text style={styles.title}>
+			{title}
+		  </Text>
+		  <View style={[styles.searchShape, styles.searchContainer]}>
+				<Image
+				  style={styles.searchIcon}
+				source={search}
+				/>
+			  <TextInput
+				style={[styles.searchShape, styles.searchInput]}
+				placeholder="Search"
+				onChangeText={searchText => setSearchText(searchText)}
+				defaultValue={searchText}
+			  />
+		  </View>
+		  {children}
+		</View>
+	</>
 	);
 }

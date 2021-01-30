@@ -10,7 +10,7 @@ import styles from './styles/CategoriesScreen';
 
 export default function CategoriesScreen({ route, navigation, children }) {
     const renderCategory = ({ item }) => (
-      <Card title={item.title} photo_url={item.photo_url} amount={item.amount} navigation={navigation} />
+      <Card item={item} navigation={navigation} />
   );
 
   function handleGoBack() {
