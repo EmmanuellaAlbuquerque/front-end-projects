@@ -6,6 +6,14 @@ const styles = StyleSheet.create({
     marginTop: 20,
   },
 
+  chipsList: {
+    paddingBottom: 30,
+  },
+
+  scrollHorizontal: {
+    marginBottom: 20
+  },
+
   // selected box
   item: {
   	padding: 10,
@@ -43,7 +51,81 @@ const styles = StyleSheet.create({
   	marginRight: 8,
 
   	alignSelf: 'center',
-  }
+  },
+
+  // data list
+  picture: {
+    width: 177,
+    height: 128,
+    borderRadius: 8,
+    marginRight: 15,
+  },
+
+  dataContainer: {
+    flexDirection: 'row',
+    marginBottom: 30,
+  },
+
+  buttonsContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+
+  dataName: {
+    color: "#2D0C57",
+    fontFamily: 'SFProText-Semibold',
+    fontSize: 18,
+    marginBottom: 5,
+  },
+
+  dataInfo: {
+    flexDirection: 'row',
+    marginBottom: 12,
+  },
+
+  price: {
+    color: "#2D0C57",
+    fontSize: 22,
+    alignSelf: 'center',
+    marginRight: 2,
+  },
+
+  measure: {
+    fontFamily: 'SFProText-Regular',
+    fontSize: 16,
+    color: "#9586A8",
+    alignSelf: 'center',
+  },
+
+  icon: {
+    width: 20,
+    height: 20,
+  },
+
+  button: {
+    paddingTop: 12,
+    paddingBottom: 12,
+    paddingLeft: 26,
+    paddingRight: 26,
+
+    marginRight: 10,
+    borderRadius: 8,
+  },
+
+  heartButton: {
+    borderWidth: 1,
+    borderColor: "#D9D0E3",
+    backgroundColor: "#FFF",
+  },
+
+  whiteShoppingCartButton: {
+    backgroundColor: "#0BCE83",
+  },
+
+  data: {
+    justifyContent: 'space-between',
+  },
 });
 
 export default styles;

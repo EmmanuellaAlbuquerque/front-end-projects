@@ -23,7 +23,7 @@ export default function CategoriesScreen({ route, navigation, children }) {
         <FlatList
         data={categories}
         renderItem={renderCategory}
-        keyExtractor={category => category.id}
+        keyExtractor={category => category.id.toString()}
         numColumns={2}
         contentContainerStyle={{ paddingBottom: 20 }}
       />
