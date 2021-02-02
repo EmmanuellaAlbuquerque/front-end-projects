@@ -27,37 +27,45 @@ const Chip = ({ item, onPress, style, selected }) => (
   </TouchableOpacity>
 );
 
-const Data = ({ item }) => (
-	<View style={styles.dataContainer}>
-		<Image
-			style={styles.picture}
-			source={item.picture}
-		/>
-		<View style={styles.data}>
-			<View>
-				<Text style={styles.dataName}>{item.name}</Text>
-				<View style={styles.dataInfo}>
-					<Text style={styles.price}>{item.price}</Text>
-					<Text style={styles.measure}>{item.measure}</Text>
+function Data({ item, navigation }) {
+	function handleCategoryItemPress() {
+    navigation.navigate('CategoryItemScreen', { item });
+  }
+
+  return (
+		<View style={styles.dataContainer}>
+			<TouchableOpacity onPress={handleCategoryItemPress}>
+				<Image
+					style={styles.picture}
+					source={item.picture}
+				/>
+			</TouchableOpacity>
+			<View style={styles.data}>
+				<View>
+					<Text style={styles.dataName}>{item.name}</Text>
+					<View style={styles.dataInfo}>
+						<Text style={styles.price}>{item.price}</Text>
+						<Text style={styles.measure}>{item.measure}</Text>
+					</View>
+				</View>
+				<View style={styles.buttonsContainer}>
+					<TouchableOpacity style={[styles.button, styles.heartButton]}>
+		  			<Image
+			        style={styles.icon}
+			        source={heart}
+			      />
+					</TouchableOpacity>
+					<TouchableOpacity style={[styles.button, styles.whiteShoppingCartButton]}>
+		  			<Image
+			        style={styles.icon}
+			        source={whiteShoppingCart}
+			      />
+					</TouchableOpacity>
 				</View>
 			</View>
-			<View style={styles.buttonsContainer}>
-				<TouchableOpacity style={[styles.button, styles.heartButton]}>
-	  			<Image
-		        style={styles.icon}
-		        source={heart}
-		      />
-				</TouchableOpacity>
-				<TouchableOpacity style={[styles.button, styles.whiteShoppingCartButton]}>
-	  			<Image
-		        style={styles.icon}
-		        source={whiteShoppingCart}
-		      />
-				</TouchableOpacity>
-			</View>
 		</View>
-	</View>
-);
+  );
+}
 
 export default function CategoryScreen({ route, navigation, children }) {
 	const chips = route.params.item.chips;
@@ -83,10 +91,11 @@ export default function CategoryScreen({ route, navigation, children }) {
     );
   };
 
-  const renderData = ({ item }) => {
+  const renderData = ({ item }, navigation) => {
     return (
       <Data
         item={item}
+        navigation={navigation}
       />
     );
   };
@@ -106,7 +115,7 @@ export default function CategoryScreen({ route, navigation, children }) {
 	    	</ScrollView>
 	      <FlatList
 	        data={data}
-	        renderItem={renderData}
+	        renderItem={(item) => renderData(item, navigation)}
 	        keyExtractor={(item) => item.id.toString()}
 	        numColumns={1}
 	        contentContainerStyle={{ paddingBottom: 20 }}

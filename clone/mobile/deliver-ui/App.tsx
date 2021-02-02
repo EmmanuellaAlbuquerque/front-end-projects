@@ -9,6 +9,7 @@ import SplashScreen from './src/pages/SplashScreen';
 import CategoriesScreen from './src/pages/CategoriesScreen';
 import TabMenuScreen from './src/pages/TabMenuScreen';
 import CategoryScreen from './src/pages/CategoryScreen';
+import CategoryItemScreen from './src/pages/CategoryItemScreen';
 
 const Stack = createStackNavigator();
 
@@ -45,6 +46,10 @@ export default function App() {
           <Stack.Screen
             name="CategoryScreen"
             component={CategoryScreen}
+          />
+          <Stack.Screen
+            name="CategoryItemScreen"
+            component={CategoryItemScreen}
           />
         </Stack.Navigator>
       </NavigationContainer>

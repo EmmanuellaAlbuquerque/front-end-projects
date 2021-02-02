@@ -7,11 +7,11 @@ const styles = StyleSheet.create({
   },
 
   chipsList: {
-    paddingBottom: 30,
+    paddingBottom: 40,
   },
 
   scrollHorizontal: {
-    marginBottom: 20
+    marginBottom: 30,
   },
 
   // selected box

@@ -3,7 +3,7 @@ import { Text, TouchableOpacity, Image } from 'react-native';
 
 import styles from './styles/Card';
 
-export default function Card({ item, navigation}) {
+export default function Card({ item, navigation }) {
 	function handleCategoryPress(title) {
 		navigation.navigate('CategoryScreen', {
             item,

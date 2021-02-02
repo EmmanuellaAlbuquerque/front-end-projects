@@ -39,6 +39,20 @@ const categories = [
       measure: "€ / piece",
       approximation: "~ 150 gr / piece",
       picture: require('../../assets/images/boston-lettuce.png'),
+      pictures: [
+        {
+          id: 0,
+          require: require('../../assets/images/boston-lettuce.png'),
+        },
+        {
+          id: 1,
+          require: require('../../assets/images/butter-lettuce.jpg'),
+        },
+        {
+          id: 2,
+          require: require('../../assets/images/boston-lettuce-fe.png'),
+        },
+      ],
       title: "Spain", 
       description: "Lettuce is an annual plant of the daisy family, Asteraceae. It is most often grown as a leaf vegetable, but sometimes for its stem and seeds. Lettuce is most often used for salads, although it is also seen in other kinds of food, such as soups, sandwiches and wraps; it can also be grilled.",
     },
