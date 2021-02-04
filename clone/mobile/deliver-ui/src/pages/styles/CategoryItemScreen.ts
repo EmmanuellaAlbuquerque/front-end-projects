@@ -9,7 +9,6 @@ const styles = StyleSheet.create({
 	},
 
   button: {
-  	// backgroundColor: "#ff0000",
   	position: 'absolute',
   	zIndex: 1,
   },
@@ -50,7 +49,9 @@ const styles = StyleSheet.create({
   	justifyContent: 'center',
   	alignItems: 'center',
 
-  	marginTop: 10,
+    marginRight: 10,
+    marginLeft: 10,
+  	marginBottom: 10,
   },
 
   priceDetails: {

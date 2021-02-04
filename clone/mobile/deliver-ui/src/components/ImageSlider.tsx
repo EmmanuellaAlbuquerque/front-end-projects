@@ -10,6 +10,8 @@ export default function ImageSlider({ images }) {
   const windowWidth = Dimensions.get('window').width;
 
   return (
+    <>
+    { images &&
     <SafeAreaView style={styles.container}>
       <View style={styles.scrollContainer}>
         <ScrollView
@@ -66,5 +68,7 @@ export default function ImageSlider({ images }) {
         </View>
       </View>
     </SafeAreaView>
+    }
+    </>
   );
 }

@@ -10,6 +10,7 @@ import CategoriesScreen from './src/pages/CategoriesScreen';
 import TabMenuScreen from './src/pages/TabMenuScreen';
 import CategoryScreen from './src/pages/CategoryScreen';
 import CategoryItemScreen from './src/pages/CategoryItemScreen';
+import PaymentMethodScreen from './src/pages/PaymentMethodScreen';
 
 const Stack = createStackNavigator();
 
@@ -50,6 +51,10 @@ export default function App() {
           <Stack.Screen
             name="CategoryItemScreen"
             component={CategoryItemScreen}
+          />
+          <Stack.Screen
+            name="PaymentMethodScreen"
+            component={PaymentMethodScreen}
           />
         </Stack.Navigator>
       </NavigationContainer>

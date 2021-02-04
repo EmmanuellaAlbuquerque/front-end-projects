@@ -4,6 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import CategoriesScreen from './CategoriesScreen';
+import CheckoutScreen from './CheckoutScreen';
 
 import styles from './styles/TabMenuScreen';
 
@@ -16,7 +17,7 @@ import shoppingCartFocused from '../../assets/icons/shopping-cart-focused.png';
 import user from '../../assets/icons/user.png';
 import userFocused from '../../assets/icons/user-focused.png';
 
-function notImplementedScreen() {
+function notImplementedScreen({ route, navigation, children }) {
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
       <Text>Not Implemented Yet</Text>
@@ -94,7 +95,7 @@ export default function TabMenuScreen() {
         }}
     >
       <Tab.Screen name="Categories" component={CategoriesScreen} />
-      <Tab.Screen name="Checkout" component={notImplementedScreen} options={{ tabBarBadge: 8 }} />
+      <Tab.Screen name="Checkout" component={CheckoutScreen} options={{ tabBarBadge: 8 }} />
       <Tab.Screen name="Profile" component={notImplementedScreen} />
     </Tab.Navigator>
   );
