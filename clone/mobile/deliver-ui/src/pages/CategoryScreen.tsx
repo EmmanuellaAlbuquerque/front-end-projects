@@ -101,7 +101,7 @@ export default function CategoryScreen({ route, navigation, children }) {
   };
 
 	return (
-		<HeaderGridContainer navigation={navigation} route={route} children={children}>
+		<HeaderGridContainer navigation={navigation} route={route} children={children} searchItem={true}>
 	    <View style={styles.CategoryContainer}>
 	    	<ScrollView horizontal={true} style={styles.scrollHorizontal}>
 		      <FlatList

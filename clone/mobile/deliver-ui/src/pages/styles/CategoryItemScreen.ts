@@ -25,20 +25,23 @@ const styles = StyleSheet.create({
 
   detailsContainer: {
   	flex: 1,
-  	padding: 20,
 
   	backgroundColor: "#F6F5F5",
-    borderTopRightRadius: 20,
-    borderTopLeftRadius: 20,
+    borderTopRightRadius: 30,
+    borderTopLeftRadius: 30,
 
     position: 'absolute',
     marginTop: windowHeight/2.5,
-    // height: windowHeight,
+    height: windowHeight,
   },
 
   icon: {
     width: 20,
     height: 20,
+  },
+
+  textContentContainer: {
+  	margin: 20,
   },
 
   actionButtonsContainer: {
@@ -62,12 +65,14 @@ const styles = StyleSheet.create({
   	fontFamily: 'SFProDisplay-Bold',
 
   	marginTop: 10,
+  	color: "#2D0C57",
   },
 
   price: {
   	fontSize: 32,
   	fontFamily: 'SFProText-Bold',
   	marginRight: 10,
+  	color: "#2D0C57",
   },
 
   measure: {
@@ -81,14 +86,15 @@ const styles = StyleSheet.create({
   	fontSize: 17,
   	color: "#06BE77",
 
-  	marginTop: 20,
+  	marginTop: 10,
   },
 
   title: {
   	fontFamily: 'SFProText-Bold',
   	fontSize: 22,
 
-  	marginTop: 30,  	
+  	marginTop: 20,
+  	color: "#2D0C57",	
   },
 
   description: {
@@ -96,7 +102,8 @@ const styles = StyleSheet.create({
   	color: "#9586A8",
   	fontSize: 17,
 
-  	marginTop: 20,
+  	marginTop: 10,
+  	marginBottom: 10,
   },
 
   heart: {

@@ -32,16 +32,18 @@ export default function CategoryItemScreen({ route, navigation }){
 		  </TouchableOpacity>
 			<ImageSlider images={item.pictures}/>
 			<View style={styles.detailsContainer}>
-				<Text style={styles.name}>{item.name}</Text>
+				<View style={styles.textContentContainer}>
+					<Text style={styles.name}>{item.name}</Text>
 
-				<View style={styles.priceDetails}>
-					<Text style={styles.price}>{item.price}</Text>
-					<Text style={styles.measure}>{item.measure}</Text>					
+					<View style={styles.priceDetails}>
+						<Text style={styles.price}>{item.price}</Text>
+						<Text style={styles.measure}>{item.measure}</Text>					
+					</View>
+
+					<Text style={styles.approximation}>{item.approximation}</Text>
+					<Text style={styles.title}>{item.title}</Text>
+					<Text style={styles.description}>{item.description}</Text>
 				</View>
-
-				<Text style={styles.approximation}>{item.approximation}</Text>
-				<Text style={styles.title}>{item.title}</Text>
-				<Text style={styles.description}>{item.description}</Text>
 
 				<View style={styles.actionButtonsContainer}>
 					<TouchableOpacity style={styles.heart}>

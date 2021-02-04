@@ -18,7 +18,7 @@ export default function CategoriesScreen({ route, navigation, children }) {
   }
 
   return (
-    <HeaderGridContainer navigation={navigation} route={route} children={children}>
+    <HeaderGridContainer navigation={navigation} route={route} children={children} searchItem={true}>
       <View style={styles.CategoriesContainer}>
         <FlatList
         data={categories}

@@ -6,7 +6,7 @@ import search from '../../assets/images/search.png'
 
 import styles from './styles/HeaderGridContainer';
 
-export default function HeaderGridContainer({ route, navigation, children }) {
+export default function HeaderGridContainer({ route, navigation, children, searchItem }) {
 	const [searchText, setSearchText] = useState('');
 	var title;
 	if (route.params !== undefined) {
@@ -28,9 +28,9 @@ export default function HeaderGridContainer({ route, navigation, children }) {
 	return (
 	<>
 		{ route.params && <Image
-	    style={styles.cover}
-	    source={route.params.item.cover}
-	  	/>
+		style={styles.cover}
+		source={route.params.item.cover}
+		/>
 	  }
 		<View style={styles.container}>
 			<View style={styles.header}>
@@ -44,7 +44,8 @@ export default function HeaderGridContainer({ route, navigation, children }) {
 		  <Text style={styles.title}>
 			{title}
 		  </Text>
-		  <View style={[styles.searchShape, styles.searchContainer]}>
+		  { searchItem && 
+			<View style={[styles.searchShape, styles.searchContainer]}>
 				<Image
 				  style={styles.searchIcon}
 				source={search}
@@ -55,7 +56,8 @@ export default function HeaderGridContainer({ route, navigation, children }) {
 				onChangeText={searchText => setSearchText(searchText)}
 				defaultValue={searchText}
 			  />
-		  </View>
+			</View>
+		  }
 		  {children}
 		</View>
 	</>
