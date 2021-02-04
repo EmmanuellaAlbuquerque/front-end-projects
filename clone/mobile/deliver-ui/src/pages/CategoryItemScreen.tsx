@@ -30,32 +30,33 @@ export default function CategoryItemScreen({ route, navigation }){
 					source={back}
 				/>
 		  </TouchableOpacity>
-			<ImageSlider images={item.pictures} />
+			<ImageSlider images={item.pictures}/>
 			<View style={styles.detailsContainer}>
-				<Text>{item.name}</Text>
+				<Text style={styles.name}>{item.name}</Text>
 
 				<View style={styles.priceDetails}>
-					<Text>{item.price}</Text>
-					<Text>{item.measure}</Text>					
+					<Text style={styles.price}>{item.price}</Text>
+					<Text style={styles.measure}>{item.measure}</Text>					
 				</View>
 
-				<Text>{item.approximation}</Text>
-				<Text>{item.title}</Text>
-				<Text>{item.description}</Text>
+				<Text style={styles.approximation}>{item.approximation}</Text>
+				<Text style={styles.title}>{item.title}</Text>
+				<Text style={styles.description}>{item.description}</Text>
 
 				<View style={styles.actionButtonsContainer}>
-					<TouchableOpacity>
+					<TouchableOpacity style={styles.heart}>
 						<Image
 							style={styles.icon}
 							source={heart}
 						/>
 					</TouchableOpacity>
 
-					<TouchableOpacity>
+					<TouchableOpacity style={styles.whiteShoppingCart}>
 						<Image
 							style={styles.icon}
 							source={whiteShoppingCart}
 						/>
+						<Text style={styles.whiteShoppingCartText}>ADD TO CART</Text>
 					</TouchableOpacity>
 				</View>
 			</View>
