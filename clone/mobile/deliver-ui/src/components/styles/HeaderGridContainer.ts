@@ -35,6 +35,7 @@ const styles = StyleSheet.create({
 
   title: {
     fontFamily: 'SFProDisplay-Bold',
+    color: "#2D0C57",
     fontSize: 34,
     marginTop: 10,
   },

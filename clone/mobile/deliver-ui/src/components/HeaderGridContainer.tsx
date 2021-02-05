@@ -6,11 +6,14 @@ import search from '../../assets/images/search.png'
 
 import styles from './styles/HeaderGridContainer';
 
-export default function HeaderGridContainer({ route, navigation, children, searchItem }) {
+export default function HeaderGridContainer({ route, navigation, children, searchItem, name }) {
 	const [searchText, setSearchText] = useState('');
 	var title;
 	if (route.params !== undefined) {
 		title = route.params.item.title;
+	}
+	else if (name){
+		title = name;
 	}
 	else {
 		title = route.name;

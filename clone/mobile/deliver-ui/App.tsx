@@ -17,10 +17,13 @@ const Stack = createStackNavigator();
 export default function App() {
   let [fontsLoaded] = useFonts({
     'SFProDisplay-Bold': require('./assets/fonts/SFProDisplay-Bold.ttf'),
+    'SFProDisplay-Medium': require('./assets/fonts/SFProDisplay-Medium.ttf'),
+
     'SFProText-Regular': require('./assets/fonts/SFProText-Regular.ttf'),
     'SFProText-Semibold': require('./assets/fonts/SFProText-Semibold.ttf'),
     'SFProText-Medium': require('./assets/fonts/SFProText-Medium.ttf'),
     'SFProText-Bold': require('./assets/fonts/SFProText-Bold.ttf'),
+
     Roboto_700Bold,
     Roboto_400Regular,
   });
