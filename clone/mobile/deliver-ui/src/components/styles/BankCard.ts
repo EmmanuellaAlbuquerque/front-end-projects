@@ -28,11 +28,13 @@ const styles = StyleSheet.create({
 		textShadowOffset: { width:  0.701049, height: 0},
 		textShadowColor: 'rgba(77, 5, 169, 0.3)',
 		textShadowRadius: 3,
+
+		textTransform: 'uppercase',
 	},
 
 	cardDetails: {
 		flexDirection: 'row',
-		justifyContent: 'space-around',
+		justifyContent: 'space-evenly',
 
 		marginTop: 40,
 		marginBottom: 30,
