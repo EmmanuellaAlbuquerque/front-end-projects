@@ -4,6 +4,7 @@ import { View, Text, Image } from 'react-native';
 import styles from './styles/BankCard';
 
 import bcSymbol from '../../assets/images/bc-symbol.png';
+import ellipse from '../../assets/images/ellipse.png';
 
 export default function BankCard() {
 	return (
@@ -15,6 +16,8 @@ export default function BankCard() {
 				<Text style={[styles.textDetails, styles.nameOnCard]}>Alexandra Smith</Text>
 				<Text style={[styles.textDetails, styles.expiryDate]}>07/21</Text>
 			</View>
+
+			<Image style={styles.image} source={ellipse}/>
 		</View>
 	);
 }

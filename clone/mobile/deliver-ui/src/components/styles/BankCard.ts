@@ -54,6 +54,15 @@ const styles = StyleSheet.create({
 	expiryDate: {
 		fontSize: 20,
 	},
+
+  image: {
+    flex: 1,
+    resizeMode: "cover",
+    height: 220,
+    width: '65%',
+    position: 'absolute',
+    right: 1,
+  },
 });
 
 export default styles;

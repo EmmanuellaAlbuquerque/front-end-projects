@@ -95,7 +95,8 @@ export default function TabMenuScreen() {
         }}
     >
       <Tab.Screen name="Categories" component={CategoriesScreen} />
-      <Tab.Screen name="Checkout" component={CheckoutScreen} options={{ tabBarBadge: 8 }} />
+      <Tab.Screen name="Checkout" component={CheckoutScreen} 
+        options={{ tabBarBadge: 8, tabBarBadgeStyle:  styles.tabBarBadgeStyle }} />
       <Tab.Screen name="Profile" component={notImplementedScreen} />
     </Tab.Navigator>
   );

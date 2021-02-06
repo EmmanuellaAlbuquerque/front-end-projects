@@ -20,12 +20,7 @@ export default function HeaderGridContainer({ route, navigation, children, searc
 	}
 
 	function handleGoBack() {
-		if (route.params !== undefined) {
-			navigation.navigate('Categories');
-		}
-		else {
-			navigation.navigate('SplashScreen');
-		}
+		navigation.navigate('Categories');
   }
 
 	return (

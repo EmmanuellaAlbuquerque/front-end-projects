@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, Image, ScrollView, TouchableOpacity } from 'react-native';
+import { Camera } from 'expo-camera';
 
 import HeaderGridContainer from '../components/HeaderGridContainer';
 import BankCard from '../components/BankCard';
@@ -16,6 +17,22 @@ export default function PaymentMethodScreen({ route, navigation, children }) {
 	const [expiryDate, setExpiryDate] = useState('');
 	const [CVC, setCVC] = useState('');
 
+	const [hasPermission, setHasPermission] = useState(null);
+  const [type, setType] = useState(Camera.Constants.Type.back);
+
+	function handleSend() {
+		// console.warn({
+		// 	name,
+		// 	cardNumber,
+		// 	expiryDate,
+		// 	CVC
+		// });
+	}
+
+	function handleOpenCamera(navigation) {
+		navigation.navigate('CameraScreen');
+	}
+
 	return (
 		<ScrollView>
     <HeaderGridContainer 
@@ -28,7 +45,9 @@ export default function PaymentMethodScreen({ route, navigation, children }) {
 
     <BankCard />
 
-    <Image style={styles.takeAPhotoIcon} source={takeAPhoto}/>
+    <TouchableOpacity onPress={() => handleOpenCamera(navigation)}>
+    	<Image style={styles.takeAPhotoIcon} source={takeAPhoto}/>
+    </TouchableOpacity>
 
     <View style={styles.textInput}>
 	    <Text style={styles.label}>Name on card</Text>
@@ -81,7 +100,7 @@ export default function PaymentMethodScreen({ route, navigation, children }) {
 	    </View>
     </View>
 
-    <TouchableOpacity style={styles.button}>
+    <TouchableOpacity style={styles.button} onPress={handleSend}>
     	<Text style={styles.buttonText}>
     		use this card
     	</Text>

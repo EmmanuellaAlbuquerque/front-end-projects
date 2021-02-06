@@ -11,6 +11,7 @@ import TabMenuScreen from './src/pages/TabMenuScreen';
 import CategoryScreen from './src/pages/CategoryScreen';
 import CategoryItemScreen from './src/pages/CategoryItemScreen';
 import PaymentMethodScreen from './src/pages/PaymentMethodScreen';
+import CameraScreen from './src/pages/CameraScreen';
 
 const Stack = createStackNavigator();
 
@@ -58,6 +59,10 @@ export default function App() {
           <Stack.Screen
             name="PaymentMethodScreen"
             component={PaymentMethodScreen}
+          />
+          <Stack.Screen
+            name="CameraScreen"
+            component={CameraScreen}
           />
         </Stack.Navigator>
       </NavigationContainer>
