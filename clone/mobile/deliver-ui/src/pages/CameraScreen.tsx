@@ -7,16 +7,21 @@ export default function CameraScreen() {
   const [type, setType] = useState(Camera.Constants.Type.back);
 
   const camRef = useRef(null);
+  // const camRef = useRef<HTMLLinkElement>(null);
 
   const takePhoto = async () => {
-    const photo = await camRef.current.takePictureAsync()
-    console.debug(photo)
-  }
+    if (camRef.current !== null) {
+      // const photo = await camRef.current.takePictureAsync();
+      // console.debug(photo);
+    }
+    // const photo = await camRef.current.takePictureAsync();
+    // console.debug(photo);
+  };
 
   useEffect(() => {
     (async () => {
       const { status } = await Camera.requestPermissionsAsync();
-      setHasPermission(status === 'granted');
+      // setHasPermission(status === 'granted');
     })();
   }, []);
 
