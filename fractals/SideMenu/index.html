@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/c668a15bf6.js" crossorigin="anonymous"></script>
+  <title>Side Menu</title>
+</head>
+
+<body>
+  <nav class="navbar">
+    <span class="hamburger-icon">
+      <a href="#" onclick="openSideMenu()">
+        <i class="fas fa-bars fa-2x"></i>
+      </a>
+    </span>
+
+    <ul class="menu-items">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div id="side-menu" class="side-nav">
+    <a href="#" class="btn-close" onclick="closeSideMenu()">&times;</a>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+  </div>
+
+  <main id="main">
+    <h1>Side Menu</h1>
+  </main>
+
+  <script>
+    function openSideMenu() {
+      document.getElementById('side-menu').style.width = '250px';
+    }
+
+    function closeSideMenu() {
+      document.getElementById('side-menu').style.width = '0px';
+    }
+  </script>
+</body>
+
+</html>
