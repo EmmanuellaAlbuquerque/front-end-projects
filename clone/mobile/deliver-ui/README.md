@@ -15,3 +15,14 @@ Technology used: React Native
 # to execute the project
 ~$ yarn start
 ```
+
+### Screens
+
+|Splash Screen|Categories|Vegetables|
+|:---:|:---:|:---:|
+|![myImage](.github/screen1.jpg)| ![myImage](.github/screen2.jpg)| ![myImage](.github/screen3.jpg)|
+
+|Item|Checkout|Payment|
+|:---:|:---:|:---:|
+|![myImage](.github/screen6.jpg)| ![myImage](.github/screen4.jpg)| ![myImage](.github/screen5.jpg)|
+
